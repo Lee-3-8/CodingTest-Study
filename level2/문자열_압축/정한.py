@@ -26,8 +26,6 @@ def solution(s):
 
             before_ch = ch
 
-        print(ch_list)
-        print(cnt_list)
         # 총 길이 (숫자의 자릿수 유의)
         for i in range(len(ch_list)):
             if cnt_list[i] != 1:

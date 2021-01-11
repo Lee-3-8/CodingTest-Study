@@ -2,7 +2,7 @@ def solution(s):
     answer = 0
     change = 0
 
-    for i in range(1, (len(s)//2 + 2)):
+    for i in range(1, (len(s)//2 + 2)): # 글자수가 1이었을때 안됨
         change = stringSlice(s,i)
         if i == 1 or answer > change:
             answer = change
@@ -23,4 +23,4 @@ def stringSlice(string, n) :
             result = result + compare
     return len(result)
 
-print(solution(""))
+print(solution("a"))

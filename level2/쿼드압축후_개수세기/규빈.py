@@ -1,9 +1,6 @@
 def solution(arr):
     Len = len(arr)
 
-    if Len == 1:
-        return [arr.count(0), arr.count(1)]
-
     zeroNum = sum(arr[i].count(0) for i in range(Len))
     oneNum = sum(arr[i].count(1) for i in range(Len))
     answer = [zeroNum, oneNum]
@@ -15,7 +12,7 @@ def solution(arr):
 
 def quad(arr, answer):
     length = len(arr)
-    if length < 1:
+    if length < 2:
         return answer
     
     splitLen = length//2

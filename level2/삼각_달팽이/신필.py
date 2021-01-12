@@ -1,5 +1,3 @@
-import itertools
-
 
 def solution(n):
     result = [[0]*i for i in range(1,n+2) ]

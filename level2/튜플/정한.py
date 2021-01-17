@@ -6,7 +6,7 @@ import re
 def solution(s):
     answer = []
 
-    temp = re.findall(r"{[\d | ,]+}", s)  # { (숫자와 콤마만있는) }들 찾기
+    temp = re.findall(r"{[\d|,]+}", s)  # { (숫자와 콤마만있는) }들 찾기
     temp.sort(key=lambda x: len(x))  # {}안 개수오름차순으로 정렬
 
     temp = " ".join(temp)  # 문자열하나로 합치기

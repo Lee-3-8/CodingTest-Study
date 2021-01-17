@@ -14,8 +14,8 @@ def isPrime2(n): # 에라토스테네스의 체
     for i in range(2,n+1):
         if a[i]:
             primes.append(i)
-        for j in range(2*i, n+1, i):
-            a[j] = False
+            for j in range(2*i, n+1, i):
+                a[j] = False
     return(primes)
 
 
@@ -42,7 +42,7 @@ def solution2(nums): # 두번째
         result += isPrime1(i)
     return result
 
-def solution3(nums): # 에라토스테네스의 체 사용
+def solution3(nums): # 에라토스테네스의 체 사용 속도 up!
     re_arr = list(combinations(nums,3))
     re_arr = list(map(lambda x: sum(x) , re_arr))
     result = isPrime2(max(re_arr))

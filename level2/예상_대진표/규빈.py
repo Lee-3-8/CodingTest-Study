@@ -7,7 +7,7 @@ def solution(n,a,b):
         flagA = up(std, a)
         flagB = up(std, b)
         if flagA == flagB:
-            if flagA != True:
+            if flagA is False:
                 std -= n//2
 
         else:
@@ -15,4 +15,4 @@ def solution(n,a,b):
         n = n//2
 
 def up(halfN, num):
-    return True if num > halfN else False
+    return num > halfN

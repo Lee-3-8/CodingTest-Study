@@ -1,4 +1,4 @@
-EMPTY, CHECK = '@', '#'
+EMPTY = '@'
 
 def remove_block(m, n, board):
     removed = False

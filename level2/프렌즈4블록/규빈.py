@@ -19,8 +19,6 @@ def solution(m, n, board):
     return answer
 
 def isSame(row,col,arr):
-    if row == len(arr)-1 or col == len(arr[0])-1:
-        return False
     ch = arr[row][col]
     if arr[row+1][col] == ch:
         if arr[row][col+1] == ch:

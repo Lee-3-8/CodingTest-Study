@@ -11,8 +11,7 @@ def solution(m, musicinfos):
         music = changeMelody(music)
         music = getRealPlay(start, end, music)
 
-        p = re.search(f'{m}', music)
-        if p:
+        if re.search(f'{m}', music): # m in music
             answer.append((len(music),title))
     
     if answer:

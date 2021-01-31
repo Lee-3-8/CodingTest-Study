@@ -10,7 +10,4 @@ def solution(n, t, m, p):
     while len(buffer) < t * m:
         buffer += get_base_str(num, n)
         num += 1
-    return "".join([buffer[i] for i in range(p-1, len(buffer[:t*m]), m)])
-
-if __name__ == '__main__':
-    print(solution(16,16,2,1))
+    return "".join([buffer[i] for i in range(p-1, t*m, m)])

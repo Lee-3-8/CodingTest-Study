@@ -7,7 +7,7 @@ def solution(relation):
 
     for i in range(1, cols+1):
         com = list(combinations(arr, i)) # i 자리수 조합
-        for tup in com: # 조합 돌려보기
+        for tup in com: # 조합 돌려보기 
             tup = set(tup)
             if minimality(answer, tup) is False: # 최소성 검사
                 continue

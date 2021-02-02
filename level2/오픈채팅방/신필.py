@@ -10,6 +10,7 @@ def solution(record):
         if command[0] != 'Leave':
             uid_map[command[1]] = command[2]
             print(command[0], uid_map)
+            
     for v in record:
         command = v.split(' ')
         if command[0] != 'Change':

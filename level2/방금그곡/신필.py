@@ -27,7 +27,7 @@ def solution(m, musicinfos):
             i += 1
     return max(result, key=result.get) if result else "(None)"
 
-# print(solution(	"ABCDEFG", ["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]))
+print(solution(	"ABCDEFG", ["12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"]))
 # print(solution(	"CC#BCC#BCC#BCC#B", ["03:00,03:30,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"]))
-print(solution(	"CDCDF", ["00:00,00:20,fuck,CDCDCDF"]))
+# print(solution(	"CDCDF", ["00:00,00:20,fuck,CDCDCDF"]))
 # print(calc_time("13:50","14:00"))

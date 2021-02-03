@@ -1,9 +1,8 @@
-import string
-from collections import deque 
+from string import ascii_uppercase 
 
 def solution(msg):
     len_dic = 26
-    str_dic = { key:val+1 for val,key in enumerate(string.ascii_uppercase)}
+    str_dic = { key:val+1 for val,key in enumerate(ascii_uppercase)}
     result = []
     print(str_dic)
     i,j = 1,0

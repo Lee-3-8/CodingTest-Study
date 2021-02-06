@@ -12,7 +12,6 @@ def solution(lines):
         startTime = datetime(2016,9,15,0,0,0) + startTime
         times.append([startTime, i])
         times.append([endTime, i])
-    times = sorted(times, key= lambda x : (x[1],x[0]))
 
     for i in range(len(times) - 1):
         secLater = times[i][0] + timedelta(seconds=1) - timedelta(milliseconds=1)

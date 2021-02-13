@@ -1,4 +1,3 @@
-from itertools import permutations
 def solution(a):
     answer = len(a)
     left, right = 0, answer - 1

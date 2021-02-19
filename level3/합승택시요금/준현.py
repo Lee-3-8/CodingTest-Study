@@ -35,6 +35,7 @@ def dijkstra(graph, start):
 
 def solution(n, s, a, b, fares):
     graph = init(n, fares)
+    print(graph)
     distances = dijkstra(graph, s)
     print(distances)
     min_distance = distances[a][1]+distances[b][1]

@@ -29,8 +29,10 @@ def match_chain(key,lock):
 def solution(key, lock):
     key_location = get_location(1,key)
     lock_location = get_location(0,lock)
+
     key_abs = get_abs_chain(key_location)
     lock_abs = get_abs_chain(lock_location)
+    
     result = match_chain(key_abs,lock_abs)
     return result
 

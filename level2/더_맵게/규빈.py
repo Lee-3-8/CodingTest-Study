@@ -5,7 +5,7 @@ def solution(scoville, K):
     for i in scoville:
         heapq.heappush(heap, i)
 
-    for _ in range(len(heap) - 1):
+    for _ in range(len(heap)):
         a = heapq.heappop(heap)
         if a >= K:
             return answer
@@ -15,5 +15,3 @@ def solution(scoville, K):
         c = a + b * 2
         heapq.heappush(heap, c)
         answer += 1
-
-    return -1

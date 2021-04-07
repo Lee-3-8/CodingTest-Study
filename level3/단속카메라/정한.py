@@ -17,6 +17,7 @@ def solution(routes):
                 m = s
             if M > e:
                 M = e
+
     cnt += 1
     return cnt
 

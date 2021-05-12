@@ -6,3 +6,6 @@ def dfs(numbers,index,result,target):
 
 def solution(numbers, target):
     return dfs(numbers, 1, numbers[0]*-1, target) + dfs(numbers, 1, numbers[0], target)
+
+if __name__ == '__main__':
+    print(solution([1,1,1,1,1],3))

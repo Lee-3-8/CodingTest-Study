@@ -15,9 +15,11 @@ def solution(tickets):
 		while graph[cur]:
 			dfs(graph[cur].pop())
 		else:
-			nonlocal answer
 			answer.append(cur)
 	dfs('ICN')
 	return answer[::-1]
 
+tickets = [["ICN", "SFO"], ["ICN", "ATL"], [
+    "SFO", "ATL"], ["ATL", "ICN"], ["ATL", "SFO"]]
+print(solution(tickets))
 	

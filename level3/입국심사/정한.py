@@ -1,7 +1,7 @@
 # 3레벨     코딩테스트 고득점 Kit     입국심사
 def solution(n, times):
     l = 1
-    r = max(times) * n
+    r = min(times) * n
     while l <= r:
         m = (l + r) // 2
         num = 0

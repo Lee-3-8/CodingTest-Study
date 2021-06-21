@@ -1,16 +1,26 @@
+
+from collections import defaultdict
+
 def solution(gems):
-    category = set(gems)
-    category = len(category)
-    temp = set()
-    answer = (0,len(gems))
-    for i in range(len(gems)):
-        for j in range(i,len(gems)):
-            temp.add(gems[j])
-            if category == len(temp):
-                answer = (i,j) if j-i < answer[1] - answer[0] else answer
+    gem_length = len(set(gems))
+    left,right,buy = 0,float('inf'),defaultdict(int)
+    l,r = 0,0
+    while r < len(gems):
+        while r < len(gems):
+            buy[gems[r]]+= 1
+            if len(buy) == gem_length:
                 break
-        temp.clear()
-    return answer[0] + 1,answer[1]+1
+            r += 1
+        while len(buy) == gem_length:
+            buy[gems[l]]-= 1
+            if buy[gems[l]] == 0:
+                del buy[gems[l]]
+                break
+            l += 1
+        left,right = (l,r) if r-l < right-left else (left,right)
+        l += 1
+        r += 1
+    return left + 1, right + 1
 
 if __name__ == '__main__':
     print(solution(	["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]))

@@ -1,7 +1,7 @@
 import re
 from itertools import product
 def solution(user_id, banned_id):
-    answer = []
+    answer = set()
 
     arr = [[] for _ in range(len(banned_id))]
 
@@ -15,6 +15,6 @@ def solution(user_id, banned_id):
     for users in product(*arr):
         s_user = set(users)
         if len(s_user) == len(users):
-            answer.append(tuple(sorted(list(users))))
+            answer.add(tuple(sorted(list(users))))
 
-    return len(set(answer))
+    return len(answer)

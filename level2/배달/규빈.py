@@ -1,4 +1,5 @@
 from collections import defaultdict
+from collections import deque
 def solution(N, road, K):
     answer = 0
     graph = [[0] * N for _ in range(N)]
@@ -9,10 +10,10 @@ def solution(N, road, K):
             graph[n1-1][n2-1] = w
             graph[n2-1][n1-1] = w
 
-    queue = [0]
+    queue = deque([0])
 
     while queue:
-        n = queue.pop()
+        n = queue.popleft()
         for i in range(N):
             if graph[n][i] and distance[i] >= distance[n] + graph[n][i]:
                 if distance[n] == float("inf"):

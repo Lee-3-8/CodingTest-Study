@@ -1,20 +1,17 @@
 
 def solution(s):
-    open_tag = ['(','[','{']
     tagMap = {
         '(':')',
         '[':']',
         '{':'}'
     }
     def is_right_tags(tags):
-        que = []
+        stack = []
         for tag in tags:
-            if que and tagMap[que[-1]] == tag:
-                que.pop()
-            elif tag in open_tag:
-                que.append(tag)
+            if stack and tagMap[stack[-1]] == tag: stack.pop()
+            elif tag in tagMap: stack.append(tag)
             else: return False
-        return False if que else True
+        return False if stack else True
         
     rotate_tags = [is_right_tags(s[i:]+s[:i]) for i in range(len(s))]
     return sum(rotate_tags)

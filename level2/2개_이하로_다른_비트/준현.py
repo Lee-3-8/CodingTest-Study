@@ -1,14 +1,13 @@
-
 def solution(numbers):
     answer = []
     for i in numbers:
         if i % 2 == 0:
-            answer.append(i+1)
+            answer.append(i + 1)
         else:
-            binary = '0'+str(bin(i)[2:])
-            zero = list(filter(lambda x: binary[x] == '0', range(len(binary))))
-            binary = binary[:zero[-1]]+'10'+binary[zero[-1]+2:]
-            answer.append(int('0b'+binary, 2))
+            binary = "0" + str(bin(i)[2:])
+            zero = list(filter(lambda x: binary[x] == "0", range(len(binary))))
+            binary = binary[: zero[-1]] + "10" + binary[zero[-1] + 2 :]
+            answer.append(int("0b" + binary, 2))
     return answer
 
 

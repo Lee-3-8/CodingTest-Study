@@ -10,7 +10,6 @@ def solution(numbers):
 
             if idx == 0:
                 temp = ["1"] + temp
-
                 break
 
         if idx != len(temp) - 1:
